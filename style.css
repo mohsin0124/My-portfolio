@@ -53,11 +53,30 @@
   .about-section img {
     border-radius: 50%;
     height: 300px;
-    width: 500px;
+    width: 490px;
     object-fit: cover;
     box-shadow: 0 4px 20px rgba(255, 111, 97, 0.3);
     transition: transform 0.3s ease;
   }
+
+  @media (max-width: 768px) { /* Adjust 768px as needed for your design */
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center the content */
+        text-align: center; /* Center text within the section */
+    }
+
+    .about-section img {
+        width: 200px; /* Smaller image on mobile */
+        height: 200px;
+        margin-bottom: 2rem; /* Add space below the image */
+    }
+
+    .about-content{
+        text-align: left;
+    }
+}
+  
   
   .about-section img:hover {
     transform: scale(1.1);
